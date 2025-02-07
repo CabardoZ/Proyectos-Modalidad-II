@@ -63,10 +63,6 @@ avance_eje2 = {
 avance_eje2_df = pd.DataFrame(avance_eje2)
 
 
-# Inicializar la aplicación Dash
-app = dash.Dash(__name__)
-
-
 # Crear el DataFrame (reemplazar con tus datos reales)
 transferencias_df_clean = pd.DataFrame({
     'Municipio': ['Atlatahucan', 'Ayala', 'Cuautla', 'Huitzilac', 'Miacatlán', 'Tepalcingo', 'Tetecala', 'Tetela del Volcán', 'Tlalnepantla', 'Tlayacapan', 'Totolapan', 'Xochitepec'],
@@ -446,6 +442,9 @@ fig_meses.update_layout(
 
                                                                        ####LAYOUT#####
 
+app = dash.Dash(__name__)
+server = app.server
+
 app.layout = html.Div(
     className="ddk-container",
     style={
@@ -664,9 +663,7 @@ app.layout = html.Div(
     ]
 )
 
-server = app.server
 
 
 if __name__ == "__main__":
-    import os
     app.run_server(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
