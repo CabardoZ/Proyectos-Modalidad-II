@@ -18,7 +18,7 @@ import plotly.graph_objects as go
 
                                                                                 ###### DATOS ######
 file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
-
+xls = pd.ExcelFile('PROYECTOS MODALIDAD II PROABIM 2023.xlsx')
 
 # Cargar las hojas de datos
 transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
