@@ -11,34 +11,29 @@ Original file is located at
 
 #### PAQUETES #######
 import pandas as pd
+
+df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
+
 from io import BytesIO
 import dash
 from dash import dcc, html
 import plotly.express as px
+import dash_html_components as html
 import pandas as pd
 import plotly.graph_objects as go
+from dash.dependencies import Input, Output
 import os
 
+                                                                 ###### DATOS ######
+
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
-
 file_path = "PROYECTOS MODALIDAD II PROABIM 2023.xlsx"
-
 xls = pd.ExcelFile('PROYECTOS MODALIDAD II PROABIM 2023.xlsx')
-
-                                                                                ###### DATOS ######
-
 transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
-
 transferencias_df.columns = transferencias_df.columns.str.strip()
-
 transferencias_df_clean = transferencias_df[['Municipio', 'Fecha Transferencia', 'Monto', 'Proyecto/Programa', 'Estado']]
-
-
-# Asegurarnos de que los datos de 'Fecha Transferencia' sean de tipo fecha
 transferencias_df_clean.loc[:, 'Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
-
 proyectos_eje2_df = pd.read_excel(xls, sheet_name='EJECUCIÓN DE PROYECTOS EJE 2')
-
 data_eje2 = {
     'Municipio': ['Atlatahucan', 'Ayala', 'Cuautla', 'Huitzilac', 'Miacatlán', 'Tepalcingo', 'Tetecala', 'Tetela del Volcán', 'Tlalnepantla', 'Tlayacapan', 'Totolapan', 'Xochitepec'],
     'Monto Eje 2': [960000, 96000, 96000, 96000, 96000, 96000,96000,96000,96000,96000,96000,96000],
@@ -443,7 +438,7 @@ fig_meses.update_layout(
                                                                        ####LAYOUT#####
 
 app = dash.Dash(__name__)
-server = app.server
+
 
 app.layout = html.Div(
     className="ddk-container",
@@ -663,7 +658,9 @@ app.layout = html.Div(
     ]
 )
 
+server = app.server
 
+# Ejecutar la aplicación
+if __name__ == '__main__':
+    app.run_server(debug=True)
 
-if __name__ == "__main__":
-    app.run_server(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
