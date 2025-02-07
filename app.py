@@ -681,7 +681,7 @@ app.layout = html.Div(
         ),
     ]
 )
-#####EJECUCIÓN######
+
 server = app.server
 
 if __name__ == '__main__':
