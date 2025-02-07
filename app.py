@@ -439,6 +439,7 @@ fig_meses.update_layout(
 
 app = dash.Dash(__name__)
 
+server = app.server
 
 app.layout = html.Div(
     className="ddk-container",
@@ -658,9 +659,6 @@ app.layout = html.Div(
     ]
 )
 
-server = app.server
 
-# Ejecutar la aplicación
-if __name__ == '__main__':
-    app.run_server(debug=True)
-
+if __name__ == "__main__":
+    app.run_server(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
