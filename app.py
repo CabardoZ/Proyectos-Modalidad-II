@@ -17,8 +17,8 @@ df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 from io import BytesIO
 import dash
 from dash import dcc, html
+from dash import html
 import plotly.express as px
-import dash_html_components as html
 import pandas as pd
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
