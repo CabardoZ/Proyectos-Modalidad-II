@@ -22,16 +22,16 @@ import os
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
                                                                                 ###### DATOS ######
-file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
+file_path = "PROYECTOS MODALIDAD II PROABIM 2023.xlsx"
 
-xls = pd.ExcelFile(file_path)
-
-df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
-# Cargar las hojas de datos
-transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
-proyectos_eje1_df = pd.read_excel(xls, sheet_name='EJECUCION DE PROYECTOS EJE 1')
-proyectos_eje2_df = pd.read_excel(xls, sheet_name='EJECUCIÓN DE PROYECTOS EJE 2')
-gastos_operativos_df = pd.read_excel(xls, sheet_name='GASTOS OPERATIVOS')
+if os.path.exists(file_path):
+    xls = pd.ExcelFile(file_path)
+    transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
+    proyectos_eje1_df = pd.read_excel(xls, sheet_name='EJECUCION DE PROYECTOS EJE 1')
+    proyectos_eje2_df = pd.read_excel(xls, sheet_name='EJECUCIÓN DE PROYECTOS EJE 2')
+    gastos_operativos_df = pd.read_excel(xls, sheet_name='GASTOS OPERATIVOS')
+else:
+    print(f"❌ ERROR: No se encontró el archivo {file_path}")
 
 # Mostrar las primeras filas de cada DataFrame
 transferencias_df.head(), proyectos_eje1_df.head(), proyectos_eje2_df.head(), gastos_operativos_df.head()
