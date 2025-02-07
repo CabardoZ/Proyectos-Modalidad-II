@@ -22,7 +22,8 @@ import os
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
 file_path = "PROYECTOS MODALIDAD II PROABIM 2023.xlsx"
-xls = pd.ExcelFile(file_path) 
+
+xls = pd.ExcelFile('PROYECTOS MODALIDAD II PROABIM 2023.xlsx')
 
                                                                                 ###### DATOS ######
 
