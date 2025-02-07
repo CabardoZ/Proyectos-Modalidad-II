@@ -85,6 +85,7 @@ avance_eje2_df = pd.DataFrame(avance_eje2)
 
 # Inicializar la aplicación Dash
 app = dash.Dash(__name__)
+server = app.server 
 
 # Crear el DataFrame (reemplazar con tus datos reales)
 transferencias_df_clean = pd.DataFrame({
@@ -683,8 +684,6 @@ app.layout = html.Div(
     ]
 )
 
-server = app.server
 
 if __name__ == "__main__":
     app.run_server(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-
