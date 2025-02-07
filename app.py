@@ -23,10 +23,6 @@ df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
                                                                                 ###### DATOS ######
 file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
 
-df = pd.read_excel(next(iter(uploaded)),sheet_name=None)
-
-xls = pd.ExcelFile(file_path)
-
 xls = pd.ExcelFile(file_path)
 
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
