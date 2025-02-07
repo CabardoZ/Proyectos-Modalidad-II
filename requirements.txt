@@ -2,4 +2,4 @@ dash
 pandas
 plotly
 gunicorn
-openpyx
+openpyxl
