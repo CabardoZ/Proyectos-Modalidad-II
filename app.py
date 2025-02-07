@@ -23,30 +23,15 @@ df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
                                                                                 ###### DATOS ######
 
-
-# Mostrar las primeras filas de cada DataFrame
-transferencias_df.head(), proyectos_eje1_df.head(), proyectos_eje2_df.head(), gastos_operativos_df.head()
-
 transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
 
 transferencias_df.columns = transferencias_df.columns.str.strip()
 
 transferencias_df_clean = transferencias_df[['Municipio', 'Fecha Transferencia', 'Monto', 'Proyecto/Programa', 'Estado']]
 
-# Verificar los primeros datos
-transferencias_df_clean.head()
 
 # Asegurarnos de que los datos de 'Fecha Transferencia' sean de tipo fecha
 transferencias_df_clean.loc[:, 'Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
-
-# Verificar las primeras filas después de convertir la fecha
-transferencias_df_clean.head()
-
-# Verificar si hay valores nulos en la columna 'Fecha Transferencia'
-transferencias_df_clean['Fecha Transferencia'].isnull().sum()
-
-# Verificar el tipo de datos de la columna 'Fecha Transferencia'
-transferencias_df_clean['Fecha Transferencia'].dtype
 
 proyectos_eje2_df = pd.read_excel(xls, sheet_name='EJECUCIÓN DE PROYECTOS EJE 2')
 
