@@ -65,7 +65,7 @@ avance_eje2_df = pd.DataFrame(avance_eje2)
 
 # Inicializar la aplicación Dash
 app = dash.Dash(__name__)
-server = app.server
+
 
 # Crear el DataFrame (reemplazar con tus datos reales)
 transferencias_df_clean = pd.DataFrame({
@@ -663,6 +663,8 @@ app.layout = html.Div(
         ),
     ]
 )
+
+server = app.server
 
 
 if __name__ == "__main__":  
