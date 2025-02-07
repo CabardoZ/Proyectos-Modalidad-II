@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1K_pn7qL8d35boMoiloSUCKxdzJnBrVaq
 """
 
-df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
+
 
 #### PAQUETES #######
 import pandas as pd
@@ -17,6 +17,8 @@ from dash import dcc, html
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+
+df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
                                                                                 ###### DATOS ######
 file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
