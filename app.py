@@ -45,7 +45,7 @@ transferencias_df_clean = transferencias_df[['Municipio', 'Fecha Transferencia',
 transferencias_df_clean.head()
 
 # Asegurarnos de que los datos de 'Fecha Transferencia' sean de tipo fecha
-transferencias_df_clean['Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
+transferencias_df_clean.loc[:, 'Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
 
 # Verificar las primeras filas después de convertir la fecha
 transferencias_df_clean.head()
