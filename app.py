@@ -17,6 +17,7 @@ from dash import dcc, html
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+import os
 
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
@@ -684,6 +685,6 @@ app.layout = html.Div(
 
 server = app.server
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    app.run_server(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
