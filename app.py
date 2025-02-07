@@ -21,6 +21,9 @@ import os
 
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)
 
+file_path = "PROYECTOS MODALIDAD II PROABIM 2023.xlsx"
+xls = pd.ExcelFile(file_path) 
+
                                                                                 ###### DATOS ######
 
 transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
