@@ -15,10 +15,12 @@ from dash import dcc, html
 import plotly.express as px
 import pandas as pd
 import plotly.graph_objects as go
+import os
 
+
+file_path = os.path.join(os.getcwd(), "PROYECTOS MODALIDAD II PROABIM 2023.xlsx")
+xls = pd.ExcelFile(file_path)
                                                                                 ###### DATOS ######
-file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
-xls = pd.ExcelFile('PROYECTOS MODALIDAD II PROABIM 2023.xlsx')
 
 # Cargar las hojas de datos
 transferencias_df = pd.read_excel(xls, sheet_name='TRANSFERENCIAS')
@@ -39,7 +41,7 @@ transferencias_df_clean = transferencias_df[['Municipio', 'Fecha Transferencia',
 transferencias_df_clean.head()
 
 # Asegurarnos de que los datos de 'Fecha Transferencia' sean de tipo fecha
-transferencias_df_clean['Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
+transferencias_df_clean.loc[:, 'Fecha Transferencia'] = pd.to_datetime(transferencias_df_clean['Fecha Transferencia'], errors='coerce')
 
 # Verificar las primeras filas después de convertir la fecha
 transferencias_df_clean.head()
