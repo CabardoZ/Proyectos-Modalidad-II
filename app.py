@@ -20,6 +20,8 @@ import plotly.graph_objects as go
 
      
 df = pd.read_excel('PROYECTOS MODALIDAD II PROABIM 2023.xlsx', sheet_name=None)                                                                          
+file_path = 'PROYECTOS MODALIDAD II PROABIM 2023.xlsx'
+xls = pd.ExcelFile('PROYECTOS MODALIDAD II PROABIM 2023.xlsx')
 
 
 
