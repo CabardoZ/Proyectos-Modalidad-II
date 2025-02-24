@@ -529,7 +529,7 @@ app.layout = html.Div(
                                     name="Avance Eje I"
                                 )
                             ]).update_layout(
-                                title="Avance en la ejecución de recursos asignados Eje I (Certificación de Mujeres en Oficios no tradicionales)",
+                                title="Porcentaje de recursos aplicados(Certificación de Mujeres en Oficios no tradicionales)",
                                 xaxis_title="Avance (%)",
                                 yaxis_title="Municipio",
                                 template='plotly_dark',
@@ -555,7 +555,7 @@ app.layout = html.Div(
                                     name="Avance Eje II"
                                 )
                             ]).update_layout(
-                                title="Avance en la ejecución de recursos asignados Eje II (Certificación en educación media)",
+                                title="Porcentaje de recursos aplicados(Certificación en educación media)",
                                 xaxis_title="Avance (%)",
                                 yaxis_title="Municipio",
                                 template='plotly_dark',
