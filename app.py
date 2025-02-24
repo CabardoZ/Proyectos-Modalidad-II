@@ -485,7 +485,7 @@ app.layout = html.Div(
         'margin': '0 auto'  # Centrar el contenido
     },
     children=[
-        html.H1("PLATAFORMA DE RECURSOS FEDERALES TRANSFERIDOS MODALIDAD II DEL PROABIM 2023", style={
+        html.H1("RECURSOS FEDERALES TRANSFERIDOS MODALIDAD II DEL PROGRAMA PARA EL ADELANTO, BIENESTAR E IGUALDAD DE LAS MUJERES EN MORELOS", style={
             'color': '#f6a93c',  # Título en blanco
             'textAlign': 'center',
             'fontSize': '28px',  # Título con un tamaño de fuente más pequeño
@@ -493,7 +493,7 @@ app.layout = html.Div(
             'textTransform': 'uppercase',  # Hacer el título todo en mayúsculas
             'letterSpacing': '2px'  # Espaciado de letras para un estilo futurista
         }),
-        html.H2("El presente aplicativo tiene por objeto el monitoreo de recursos y proyectos del Programa para el Adelanto, Bienestar e Igualdad de las Mujeres en el estado de Morelos", style={
+        html.H2("Monitoreo de recursos y proyectos del Programa para el Adelanto, Bienestar e Igualdad de las Mujeres en el estado de Morelos en su modalidad II", style={
             'color': 'white',  # Subtítulo en blanco
             'textAlign': 'center',
             'fontSize': '24px',
@@ -529,7 +529,7 @@ app.layout = html.Div(
                                     name="Avance Eje I"
                                 )
                             ]).update_layout(
-                                title="Avance en la ejecución de recursos asignados Eje I",
+                                title="Avance en la ejecución de recursos asignados Eje I (Certificación de Mujeres en Oficios no tradicionales)",
                                 xaxis_title="Avance (%)",
                                 yaxis_title="Municipio",
                                 template='plotly_dark',
@@ -555,7 +555,7 @@ app.layout = html.Div(
                                     name="Avance Eje II"
                                 )
                             ]).update_layout(
-                                title="Avance en la ejecución de recursos asignados Eje II",
+                                title="Avance en la ejecución de recursos asignados Eje II (Certificación en educación media)",
                                 xaxis_title="Avance (%)",
                                 yaxis_title="Municipio",
                                 template='plotly_dark',
@@ -593,7 +593,7 @@ app.layout = html.Div(
                                     name='Inversión per Cápita'
                                 )
                             ]).update_layout(
-                                title="Personas Beneficiadas e Inversión per Cápita Eje I",
+                                title="Personas Beneficiadas e Inversión per Cápita correspondientes al Eje I",
                                 xaxis_title="Municipio",
                                 yaxis_title="Valores",
                                 template='plotly_dark',
@@ -626,7 +626,7 @@ app.layout = html.Div(
                                     name='Inversión per Cápita'
                                 )
                             ]).update_layout(
-                                title="Personas Beneficiadas e Inversión per Cápita Eje II",
+                                title="Personas Beneficiadas e Inversión per Cápita correpondientes al Eje II",
                                 xaxis_title="Municipio",
                                 yaxis_title="Valores",
                                 template='plotly_dark',
@@ -680,9 +680,9 @@ app.layout = html.Div(
         # Pie de página
         html.Div(
             children=[
-                html.P("ELABORADO POR LIC.C.POL.EDUARDO CABRERA GUTIÉRREZ.",
+                html.P("ELABORADO POR EDUARDO CABRERA GUTIÉRREZ.",
                        style={'color': 'white', 'fontSize': '14px', 'textAlign': 'center'}),
-                html.P("FECHA DE ACTUALIZACIÓN: Diciembre 2023",
+                html.P("ELABORADO CON DATOS DE INFORMES DEL PRIMERO, SEGUNDO E INFORME DE CIERRE DEL PROABIM 2023.",
                        style={'color': 'white', 'fontSize': '14px', 'textAlign': 'center'}),
                 html.P("CABARDO.GUTZ@GMAIL.COM",
                        style={'color': 'white', 'fontSize': '14px', 'textAlign': 'center'})
